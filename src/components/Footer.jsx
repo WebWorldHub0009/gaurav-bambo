@@ -183,6 +183,7 @@ export default function Footer() {
               Email
             </h5>
             {[
+              "Gauravbamboochikmaker@gmail.com",
               "Info@gauravbamboochikmaker.in",
               
             ].map((email, i) => (
@@ -208,13 +209,9 @@ export default function Footer() {
             Contact Info
           </h4>
           <address className="not-italic leading-relaxed mb-4">
-            Plot No. 17 Ground Floor, Tech Zone IV, Nearby D-Mart, Amrapali
-            Dream Valley, Greater Noida, Uttar Pradesh 201318
+            Gaurav Bamboo Chick Maker, 22, Aims Green Avenue, G 506, Bhangel, Greater Noida, Ghaziabad, Uttar Pradesh 201318
           </address>
-          <address className="not-italic leading-relaxed mb-2">
-            Shop No. FG8M+464 Ground Floor Swarn Nagari, Block B, Swarn Nagari,
-            Sector 31, Greater Noida, Uttar Pradesh 201315
-          </address>
+          
 
           {["+91 9811367632", "+91 7838788389"].map((num, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">

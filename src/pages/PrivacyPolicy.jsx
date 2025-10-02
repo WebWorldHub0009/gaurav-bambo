@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
         {/* Content */}
         <div className="space-y-6 text-gray-700 text-sm md:text-base leading-relaxed">
           <p>
-            At <span className="font-semibold">Gautam Bamboo Chick Maker</span>, we respect your privacy
+            At <span className="font-semibold">Gaurav Bamboo Chick Maker</span>, we respect your privacy
             and are committed to protecting the personal information you share with us.
             This Privacy Policy explains how we collect, use, and safeguard your data.
           </p>
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
             If you have any questions regarding this Privacy Policy, please contact us at:
           </p>
           <p className="font-semibold">
-            📧 Email: gautambamboochickmaker@gmail.com <br />
+            📧 Email: Gauravbamboochickmaker@gmail.com <br />
             📞 Phone: +91 93153 93747 / +91 78387 88389
           </p>
         </div>

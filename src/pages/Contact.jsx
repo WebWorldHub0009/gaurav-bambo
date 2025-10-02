@@ -63,7 +63,7 @@ const Contact = () => {
                 fontFamily: "Orbitron",
               }}
             >
-              Gautam Bamboo Chick Maker
+              Gaurav Bamboo Chick Maker
             </span>{" "}
             are here to provide eco-friendly, durable, and customized bamboo
             solutions for homes, farms, and commercial spaces.
@@ -77,7 +77,7 @@ const Contact = () => {
               >
                 Contact Persons
               </h4>
-              <p>👤 Gautam Kumar</p>
+              <p>👤 Gaurav Kumar</p>
               <p>📞 +91 78387 88389</p>
               {/* <p>📞 +91 93153 93747</p> */}
               <p>📞 +91 98113 67632</p>
@@ -90,8 +90,8 @@ const Contact = () => {
               >
                 Emails
               </h4>
-              <p>✉️ gautambamboochickmaker@gmail.com</p>
-              <p>✉️ info@gautambamboochickmaker.in</p>
+              <p>✉️ Gauravbamboochikmaker@gmail.com</p>
+              <p>✉️ Info@gauravbamboochikmaker.in</p>
             </div>
 
           <div>
@@ -150,7 +150,7 @@ const Contact = () => {
 
           {/* Form */}
           <form
-            action="https://formsubmit.co/gautambamboochickmaker@gmail.com"
+            action="https://formsubmit.co/Gauravbamboochikmaker@gmail.com"
             method="POST"
             className="relative z-10 w-full max-w-lg px-8 py-12"
           >

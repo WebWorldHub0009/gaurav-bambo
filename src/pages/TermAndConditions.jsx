@@ -13,7 +13,7 @@ export default function TermsAndConditions() {
           Please read these terms carefully before using our products or
           services. By engaging with{" "}
           <span className="text-[#E8452D] font-semibold">
-            Gautam Bamboo Chick Maker
+            Gaurav Bamboo Chick Maker
           </span>
           , you agree to abide by the following terms.
         </p>
@@ -89,7 +89,7 @@ export default function TermsAndConditions() {
             6. Intellectual Property
           </h2>
           <p className="mt-2 leading-relaxed">
-            All designs, images, and branding under Gautam Bamboo Chick Maker
+            All designs, images, and branding under Gaurav Bamboo Chick Maker
             are our intellectual property. Unauthorized reproduction or resale
             is strictly prohibited.
           </p>
@@ -110,7 +110,7 @@ export default function TermsAndConditions() {
 
       {/* ✅ Footer Note */}
       <div className="text-center mt-12 text-sm text-[#555] font-['Zen_Dots']">
-        © {new Date().getFullYear()} Gautam Bamboo Chick Maker. All rights
+        © {new Date().getFullYear()} Gaurav Bamboo Chick Maker. All rights
         reserved.
       </div>
     </section>

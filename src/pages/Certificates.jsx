@@ -35,7 +35,7 @@ const certificates = [
     id: 2,
     name: "Udyam Registration",
     description:
-      "Udyam Registration Certificate under MSME, validating Gautam Bamboo Chick Maker as a trusted enterprise.",
+      "Udyam Registration Certificate under MSME, validating Gaurav Bamboo Chick Maker as a trusted enterprise.",
     file: udyam,
     tag: "MSME Verified",
   },
@@ -61,7 +61,7 @@ const CertificatePage = () => {
             <p className="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
               At{" "}
               <span className="font-bold" style={{ color: colors.deepBlue }}>
-                Gautam Bamboo Chick Maker
+                Gaurav Bamboo Chick Maker
               </span>
               , we believe in{" "}
               <span className="font-semibold" style={{ color: colors.orangeGold }}>

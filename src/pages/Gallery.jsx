@@ -157,7 +157,7 @@ const Showcase = () => {
             </span>{" "}
             of{" "}
             <span className="font-semibold" style={{ color: colors.deepBlue }}>
-              Gautam Bamboo Chick Maker
+              Gaurav Bamboo Chick Maker
             </span>{" "}
             through our elegant showcase. From handcrafted{" "}
             <span style={{ color: colors.orangeGold }}>bamboo artistry</span> to
