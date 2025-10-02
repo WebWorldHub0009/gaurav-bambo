@@ -7,7 +7,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import bg from "../assets/home/b1.jpg"; // bamboo/eco bg image
-import logo from "../assets/blogo.png"; 
+import logo from "../assets/galogo.png"; 
 
 // Color Palette
 const colors = {
