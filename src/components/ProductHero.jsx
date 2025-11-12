@@ -1,7 +1,7 @@
 // src/components/ProductHero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import heroBg from "../assets/home/b2.jpg"; // 👉 replace with your bg
+import heroBg from "../assets/home/bh1.jpg"; // 👉 replace with your bg
 
 // 🎨 Brand Colors
 const colors = {

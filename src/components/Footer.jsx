@@ -59,29 +59,31 @@ export default function Footer() {
           <img
             src={logo}
             alt="Gaurav Bamboo Chick Maker Logo"
-            className="w-30 md:w-34 mb-2"
+            className="w-30 md:w-34 mb-1"
           />
 
-          <p
-            className="text-3xl md:text-4xl font-bold tracking-wide"
-            style={{ color: colors.leafGreen, fontFamily: "'Italiana', serif" }}
-          >
-            Gaurav Bamboo Chick Maker
-          </p>
-          <p className="leading-relaxed text-whitePure text-lg mt-2">
-            Premium bamboo products and chick makers for secure, eco-friendly,
-            and aesthetic farming solutions.
-          </p>
+         <p
+  className="text-2xl md:text-2xl font-bold tracking-wide"
+  style={{ color: colors.leafGreen, fontFamily: "'Italiana', serif" }}
+>
+  Gaurav Bamboo Chick Maker
+</p>
+<p
+  className="leading-relaxed text-lg "
+  style={{ color: colors.blackPure , fontFamily: "'" }}
+>
+  Blending tradition with innovation — we craft premium, eco-friendly bamboo 
+  chicks that bring natural elegance, lasting durability, and modern design to 
+  your spaces.
+</p>
+
 
           {/* Social Icons */}
           <div className="mt-4 flex space-x-4">
             {[
               ["https://www.instagram.com", FaInstagram],
               ["https://www.facebook.com", FaFacebookF],
-              [
-                "https://api.whatsapp.com/send/?phone=919815397632&text=Hello%20Gaurav%20Bamboo%20Chick%20Maker",
-                FaWhatsapp,
-              ],
+           
             ].map(([url, Icon], i) => (
               <a
                 key={i}

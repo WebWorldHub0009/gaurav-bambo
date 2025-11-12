@@ -62,7 +62,7 @@ const FeaturedSection = () => {
         >
           <img
             src={model}
-            alt="Craftsman working"
+            alt="Bamboo craftsman at work"
             className="rounded-2xl h-[500px] md:h-[420px] shadow-2xl object-cover w-full"
           />
           {/* Badge */}
@@ -91,7 +91,7 @@ const FeaturedSection = () => {
                 color: colors.darkGreen,
               }}
             >
-              “Blending Nature with Craftsmanship”
+              “Natural Craftsmanship. Timeless Comfort.”
             </h3>
           </div>
 
@@ -102,9 +102,9 @@ const FeaturedSection = () => {
               color: colors.deepBlue,
             }}
           >
-            Crafting{" "}
-            <span style={{ color: colors.orangeGold }}>Elegance</span> with{" "}
-            <span style={{ color: colors.leafGreen }}>Sustainability</span>
+            Bringing{" "}
+            <span style={{ color: colors.orangeGold }}>Artistry</span> to{" "}
+            <span style={{ color: colors.leafGreen }}>Every Home</span>
           </h2>
 
           <p
@@ -116,18 +116,17 @@ const FeaturedSection = () => {
           >
             At{" "}
             <b style={{ color: colors.brightRed }}>Gaurav Bamboo Chick Maker</b>,
-            we merge{" "}
-            <span style={{ color: colors.deepBlue }}>heritage artistry</span>{" "}
+            we believe in turning simplicity into elegance. Our bamboo chicks and blinds
+            are handcrafted with precision, blending{" "}
+            <span style={{ color: colors.deepBlue }}>traditional techniques</span>{" "}
             with{" "}
             <span style={{ color: colors.orangeGold }}>
-              modern-day innovation
+              modern aesthetics
             </span>
-            . Each bamboo chick is{" "}
-            <span style={{ color: colors.leafGreen }}>eco-conscious</span>,
-            durable, and infused with the warmth of{" "}
-            <span style={{ color: colors.brightRed }}>trust</span>. From
-            sun-shading solutions to interior elegance, our creations redefine{" "}
-            <span style={{ color: colors.darkGreen }}>sustainable luxury</span>.
+            . Each piece adds a touch of{" "}
+            <span style={{ color: colors.leafGreen }}>natural charm</span> and{" "}
+            <span style={{ color: colors.brightRed }}>lasting durability</span>{" "}
+            to your interiors — creating beauty that breathes with nature.
           </p>
 
           {/* CTA Buttons */}
@@ -141,7 +140,7 @@ const FeaturedSection = () => {
                   fontFamily: "Zen Dots, sans-serif",
                 }}
               >
-                View Our Craft
+                Explore Our Collection
               </button>
             </Link>
 
@@ -154,7 +153,7 @@ const FeaturedSection = () => {
                   fontFamily: "Zen Dots, sans-serif",
                 }}
               >
-                Get Your Custom Bamboo Design
+                Get a Free Quote
               </button>
             </Link>
           </div>
@@ -170,7 +169,7 @@ const FeaturedSection = () => {
         >
           <img
             src={product}
-            alt="Premium Bamboo Chick"
+            alt="Premium bamboo chick blinds"
             className="rounded-2xl h-[320px] shadow-xl object-cover w-full"
           />
         </motion.div>

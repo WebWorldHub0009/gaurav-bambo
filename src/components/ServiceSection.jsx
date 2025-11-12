@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import bambooJafhari from "../assets/product/jaf.jpg";
 import dwali from "../assets/product/dchick.jpg"
 import kabutar from "../assets/product/pigeon.jpg"
-import roller from "../assets/product/pigeon.jpg"
+import roller from "../assets/home/bh2.jpg"
 import bambo from "../assets/product/hut.jpg"
 import fchick from "../assets/product/fchick.jpg"
-import bg from "../assets/home/sbg.jpg";
+// import bg from "../assets/home/sbg.jpg";
 
 const colors = {
   deepBlue: "#234A8A",
@@ -32,11 +32,10 @@ const products = [
 export default function Product() {
   return (
     <section
-      className="relative py-16 text-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}
+      className="relative py-8 text-center bg-fixed bg-cover bg-center"
+     
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50 z-0"></div>
+      
 
       <div className="relative z-10 px-4 max-w-6xl mx-auto">
         <h2
@@ -47,13 +46,13 @@ export default function Product() {
         </h2>
         <h3
           className="text-3xl sm:text-5xl font-bold mt-3"
-          style={{ color: colors.whitePure }}
+          style={{ color: colors.blackPure }}
         >
           Trusted{" "}
           <span style={{ color: colors.leafGreen }}>Bamboo Solutions</span> by
           Gaurav Bamboo Chick Maker.
         </h3>
-        <p className="text-gray-100 max-w-3xl mx-auto mt-5 mb-8">
+        <p className="text-gray-700 max-w-3xl mx-auto mt-5 mb-8">
           Explore our premium bamboo products designed for durability,
           functionality, and elegance. Click any product below for full details.
         </p>
@@ -62,7 +61,7 @@ export default function Product() {
           {products.map((product, idx) => (
             <div
               key={idx}
-              className="relative bg-white bg-opacity-95 shadow-xl rounded-2xl p-5 w-80 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform duration-500"
+              className="relative bg-white/30 bg-opacity-95 shadow-xl rounded-2xl p-5 w-80 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform duration-500"
             >
               {/* Image with lazy loading */}
               {product.imgSrc && (
@@ -93,7 +92,7 @@ export default function Product() {
           ))}
         </div>
 
-        <p className="mt-12 text-gray-100">
+        <p className="mt-12 text-gray-700">
           Don’t wait, contact us for more products and inquiries.{" "}
           <Link
             to={"/contact"}

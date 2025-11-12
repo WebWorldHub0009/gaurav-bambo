@@ -57,7 +57,7 @@ export default function HowItWorks() {
       {/* Header */}
       <div className="relative z-10 text-center mb-12 px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-blackPure">
-          How <span style={{ color: colors.brightRed }}>Gaurav Bamboo</span> Works
+          How <span style={{ color: colors.brightRed }}>We</span> Works
         </h2>
         <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
           A professional 4-step bamboo process that ensures durable, eco-friendly, and aesthetic solutions for your home or farm.

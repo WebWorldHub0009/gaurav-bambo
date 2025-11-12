@@ -1,20 +1,13 @@
 // src/components/StatsSection.jsx
 import React, { useEffect, useState } from "react";
-import {
-  FaLeaf,
-  FaSmile,
-  FaRegSun,
-  FaUsers,
-} from "react-icons/fa";
-import bg from "../assets/home/b1.jpg"; // bamboo/eco bg image
-import logo from "../assets/galogo.png"; 
+import { FaLeaf, FaSmile, FaRegSun, FaUsers } from "react-icons/fa";
+import logo from "../assets/galogo.png";
 
 // Color Palette
 const colors = {
-  deepBlue: "#234A8A",
   brightRed: "#E8452D",
   leafGreen: "#2BA44A",
-  darkGreen: "#00733B",
+  darkGray: "#555555",
   orangeGold: "#F4A300",
   blackPure: "#000000",
   whitePure: "#FFFFFF",
@@ -27,7 +20,6 @@ const StatCard = ({ icon: Icon, label, target, color }) => {
   useEffect(() => {
     const cleanTarget = target.trim().toUpperCase();
     let multiplier = 1;
-
     if (cleanTarget.includes("K")) multiplier = 1000;
     if (cleanTarget.includes("M")) multiplier = 1000000;
 
@@ -57,22 +49,22 @@ const StatCard = ({ icon: Icon, label, target, color }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center py-8 px-6 hover:shadow-xl transition-all duration-300">
       <div
-        className="w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-4"
+        className="w-16 h-16 flex items-center justify-center rounded-full mb-4"
         style={{ backgroundColor: color + "22" }}
       >
         <Icon className="text-3xl" style={{ color }} />
       </div>
       <div
         className="text-3xl font-bold"
-        style={{ fontFamily: "Zen Dots, sans-serif", color: colors.whitePure }}
+        style={{ fontFamily: "Zen Dots, sans-serif", color: colors.blackPure }}
       >
         {formatCount()}
       </div>
       <p
-        className="text-sm mt-2"
-        style={{ fontFamily: "Orbitron, sans-serif", color: "#ddd" }}
+        className="text-sm mt-2 text-center"
+        style={{ fontFamily: "Orbitron, sans-serif", color: colors.darkGray }}
       >
         {label}
       </p>
@@ -82,68 +74,69 @@ const StatCard = ({ icon: Icon, label, target, color }) => {
 
 const StatsSection = () => {
   return (
-    <section
-      className="relative py-20 px-6 md:px-20 text-center bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/80 z-0" />
-
+    <section className="relative py-10 px-6 md:px-20 bg-gray-50">
       {/* Heading */}
-      <div className="relative z-10 max-w-4xl mx-auto mb-14">
+      <div className="max-w-4xl mx-auto text-center mb-5">
         <h2
           className="text-sm tracking-widest uppercase mb-3"
           style={{
             fontFamily: "Orbitron, sans-serif",
-            color: colors.orangeGold,
+            color: colors.brightRed,
           }}
         >
-          Gautam Bamboo Chick Maker
+          Gaurav Bamboo Chick Maker
         </h2>
         <h3
           className="text-4xl md:text-5xl font-bold leading-snug mb-5"
           style={{
             fontFamily: "Italiana, serif",
-            color: colors.whitePure,
+            color: colors.blackPure,
           }}
         >
-          Blending <span style={{ color: colors.leafGreen }}>Nature</span> with{" "}
+          Redefining{" "}
+          <span style={{ color: colors.leafGreen }}>Sustainability</span> with{" "}
           <span style={{ color: colors.orangeGold }}>Elegance</span>
         </h3>
         <p
           className="text-base md:text-lg italic"
           style={{
             fontFamily: "Orbitron, sans-serif",
-            color: "#ccc",
+            color: colors.darkGray,
           }}
         >
-          Crafting eco-friendly bamboo chicks that redefine sustainability,
-          comfort, and premium living.
+          Handcrafted bamboo chicks designed to add comfort, style, and a touch of
+          nature to your living spaces.
         </p>
       </div>
 
-      {/* Brand Statement */}
-      <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center mb-20 max-w-6xl mx-auto">
+      {/* Brand Highlight */}
+      <div className="grid md:grid-cols-2 gap-10 items-center mb-10 max-w-6xl mx-auto">
         <div className="text-left">
           <h2
             className="text-6xl mb-4"
-            style={{ fontFamily: "Zen Dots, sans-serif", color: colors.orangeGold }}
+            style={{
+              fontFamily: "Zen Dots, sans-serif",
+              color: colors.orangeGold,
+            }}
           >
-            25+
+            20+
           </h2>
           <p
-            className="leading-relaxed"
-            style={{ fontFamily: "Orbitron, sans-serif", color: "#eee" }}
+            className="leading-relaxed text-lg"
+            style={{
+              fontFamily: "Orbitron, sans-serif",
+              color: colors.darkGray,
+            }}
           >
             For over{" "}
-            <span className="font-semibold" style={{ color: colors.whitePure }}>
+            <span className="font-semibold" style={{ color: colors.blackPure }}>
               two decades
             </span>
-            , Gautam Bamboo Chick Maker has been delivering handcrafted,
-            eco-friendly solutions with{" "}
-            <span style={{ color: colors.leafGreen }}>trust</span>,{" "}
-            <span style={{ color: colors.orangeGold }}>precision</span>, and{" "}
-            <span style={{ color: colors.brightRed }}>style</span>.
+            , <b style={{ color: colors.brightRed }}>Gaurav Bamboo Chick Maker</b> has
+            been delivering trusted, durable, and beautiful bamboo products that
+            reflect both{" "}
+            <span style={{ color: colors.leafGreen }}>craftsmanship</span> and{" "}
+            <span style={{ color: colors.orangeGold }}>quality</span>.
           </p>
         </div>
         <div className="flex items-center justify-end gap-4">
@@ -155,14 +148,17 @@ const StatsSection = () => {
           />
           <div>
             <p
-              className="font-semibold"
-              style={{ fontFamily: "Italiana, serif", color: colors.whitePure }}
+              className="font-semibold text-xl"
+              style={{ fontFamily: "Italiana, serif", color: colors.blackPure }}
             >
-              Gautam Bamboo
+              Gaurav Bamboo
             </p>
             <p
               className="text-sm"
-              style={{ fontFamily: "Orbitron, sans-serif", color: "#ccc" }}
+              style={{
+                fontFamily: "Orbitron, sans-serif",
+                color: colors.darkGray,
+              }}
             >
               Chick Maker
             </p>
@@ -171,11 +167,31 @@ const StatsSection = () => {
       </div>
 
       {/* Stats Grid */}
-      <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-        <StatCard icon={FaLeaf} label="Eco-Friendly Products" target="100+" color={colors.leafGreen} />
-        <StatCard icon={FaSmile} label="Happy Clients" target="1200+" color={colors.orangeGold} />
-        <StatCard icon={FaRegSun} label="Custom Designs" target="100+" color={colors.deepBlue} />
-        <StatCard icon={FaUsers} label="Expert Artisans" target="40+" color={colors.brightRed} />
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <StatCard
+          icon={FaLeaf}
+          label="Eco-Friendly Products"
+          target="100+"
+          color={colors.leafGreen}
+        />
+        <StatCard
+          icon={FaSmile}
+          label="Happy Clients"
+          target="1200+"
+          color={colors.orangeGold}
+        />
+        <StatCard
+          icon={FaRegSun}
+          label="Custom Designs"
+          target="150+"
+          color={colors.brightRed}
+        />
+        <StatCard
+          icon={FaUsers}
+          label="Skilled Artisans"
+          target="40+"
+          color={colors.blackPure}
+        />
       </div>
     </section>
   );

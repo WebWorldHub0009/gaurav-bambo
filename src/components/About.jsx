@@ -1,58 +1,40 @@
 // src/components/About.jsx
 import React from "react";
 import { FaLeaf, FaHammer, FaPaintBrush, FaGlobeAsia } from "react-icons/fa";
-import aboutImg1 from "../assets/product/b1.jpg";
-import aboutImg2 from "../assets/product/b2.jpg";
-import aboutImg3 from "../assets/product/b3.jpg";
-import aboutImg4 from "../assets/product/b4.jpg";
+import aboutImg from "../assets/home/bh3.jpg"; // ✅ Use one main image
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
-
-const colors = {
-  deepBlue: "#234A8A",
-  brightRed: "#E8452D",
-  leafGreen: "#2BA44A",
-  orangeGold: "#F4A300",
-  blackPure: "#000000",
-};
-
-const features = [
-  {
-    icon: <FaLeaf className="text-2xl text-[#2BA44A]" />,
-    title: "Eco-Friendly Materials",
-    desc: "100% natural bamboo, safe & sustainable.",
-  },
-  {
-    icon: <FaHammer className="text-2xl text-[#F4A300]" />,
-    title: "Handcrafted Excellence",
-    desc: "Skilled artisans for unmatched detailing.",
-  },
-  {
-    icon: <FaPaintBrush className="text-2xl text-[#E8452D]" />,
-    title: "Custom Designs",
-    desc: "Personalized blinds to match your interiors.",
-  },
-  {
-    icon: <FaGlobeAsia className="text-2xl text-[#234A8A]" />,
-    title: "Pan India Reach",
-    desc: "Delivering quality across every corner of India.",
-  },
-];
-
-const stats = [
-  { number: "10+", label: "Years of Craftsmanship", color: "#234A8A" },
-  { number: "500+", label: "Projects Delivered", color: "#E8452D" },
-  { number: "100%", label: "Customer Satisfaction", color: "#2BA44A" },
-  { number: "Pan India", label: "Trusted Presence", color: "#F4A300" },
-];
-
-// ✅ Slider images
-const aboutSlider = [aboutImg1, aboutImg2, aboutImg3,aboutImg4];
 
 export default function About() {
+  const features = [
+    {
+      icon: <FaLeaf className="text-2xl text-green-600" />,
+      title: "Eco-Friendly Materials",
+      desc: "100% natural bamboo, safe & sustainable.",
+    },
+    {
+      icon: <FaHammer className="text-2xl text-yellow-500" />,
+      title: "Handcrafted Excellence",
+      desc: "Skilled artisans for unmatched detailing.",
+    },
+    {
+      icon: <FaPaintBrush className="text-2xl text-red-500" />,
+      title: "Custom Designs",
+      desc: "Personalized blinds to match your interiors.",
+    },
+    {
+      icon: <FaGlobeAsia className="text-2xl text-blue-700" />,
+      title: "Pan India Reach",
+      desc: "Delivering quality across every corner of India.",
+    },
+  ];
+
+  const stats = [
+    { number: "10+", label: "Years of Craftsmanship", color: "#234A8A" },
+    { number: "500+", label: "Projects Delivered", color: "#E8452D" },
+    { number: "100%", label: "Customer Satisfaction", color: "#2BA44A" },
+    { number: "Pan India", label: "Trusted Presence", color: "#F4A300" },
+  ];
+
   return (
     <section className="relative bg-[#f5ede3] py-16 px-6 md:px-16 font-[Raleway] overflow-hidden">
       {/* ✅ Watermark */}
@@ -72,7 +54,7 @@ export default function About() {
           </p>
         </div>
 
-        {/* ✅ 3-Column Layout */}
+        {/* ✅ 3-Column Layout (Now only 2 columns with image centered) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
           {/* Left */}
           <div>
@@ -94,29 +76,15 @@ export default function About() {
             </Link>
           </div>
 
-          {/* Middle (Image Slider) */}
+          {/* Center Image */}
           <div className="flex justify-center">
-            <Swiper
-              spaceBetween={20}
-              slidesPerView={1}
-              loop
-              autoplay={{ delay: 2500, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
-              modules={[Autoplay, Pagination]}
-              className="w-full md:w-[90%] rounded-lg shadow-xl"
-            >
-              {aboutSlider.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={img}
-                    alt={`About Slide ${i + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="rounded-lg shadow-xl object-cover w-full h-[350px] md:h-[420px]"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            <img
+              src={aboutImg}
+              alt="About Us"
+              className="rounded-lg shadow-xl object-cover w-full md:w-[90%] h-[350px] md:h-[420px]"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           {/* Right (Features) */}

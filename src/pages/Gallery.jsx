@@ -146,30 +146,6 @@ const Showcase = () => {
           >
             Our Timeless <span style={{ color: colors.orangeGold }}>Craft</span>
           </h2>
-          <div
-            className="w-24 h-1 mx-auto mt-3 rounded-full"
-            style={{ background: colors.brightRed }}
-          ></div>
-          <p className="mt-5 text-gray-600 text-lg leading-relaxed">
-            Experience the{" "}
-            <span className="font-semibold" style={{ color: colors.darkGreen }}>
-              heritage
-            </span>{" "}
-            of{" "}
-            <span className="font-semibold" style={{ color: colors.deepBlue }}>
-              Gaurav Bamboo Chick Maker
-            </span>{" "}
-            through our elegant showcase. From handcrafted{" "}
-            <span style={{ color: colors.orangeGold }}>bamboo artistry</span> to
-            modern innovations, our gallery celebrates a legacy of{" "}
-            <span
-              className="font-semibold"
-              style={{ color: colors.brightRed }}
-            >
-              durability, design, and trust
-            </span>
-            .
-          </p>
         </div>
 
         {/* Gallery Grid */}

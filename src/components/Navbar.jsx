@@ -30,7 +30,7 @@ const colors = {
   whitePure: "#FFFFFF",
 };
 
-// ✅ Nav Items (all in center now)
+// ✅ Nav Items
 const navItems = [
   { name: "Home", path: "/", icon: <FaHome /> },
   { name: "About", path: "/about", icon: <FaInfoCircle /> },
@@ -77,38 +77,41 @@ const ModernNavbar = () => {
 
   return (
     <>
-      {/* 🔹 Slim Top Header */}
+      {/* 🔹 Top Header (Laptop Only) */}
       <div
+        className="hidden md:block"
         style={{
           background: `linear-gradient(to right, ${colors.deepBlue}, ${colors.leafGreen}, ${colors.deepBlue})`,
           color: colors.whitePure,
         }}
-      ><div className="flex flex-col sm:flex-row items-center justify-between px-4 py-1 text-xs md:text-sm gap-2 sm:gap-0">
-  {/* Mobile View: UDYAM left, NCS right (first row) */}
-  <div className="flex justify-between w-full sm:w-auto mb-1 sm:mb-0">
-    <p className="flex items-center gap-1 text-[10px] sm:text-sm">
-      <FaIdBadge style={{ color: colors.orangeGold }} />
-      <span style={{ color: colors.whitePure }}>UDYAMUP-28-0178874</span>
-    </p>
-    <p className="flex items-center gap-1 text-[10px] sm:text-sm">
-      <MdEmail style={{ color: colors.orangeGold }} />
-      <span style={{ color: colors.whitePure }}>NCS ID:- E20I72-2318235108616</span>
-    </p>
-  </div>
+      >
+        <div className="flex items-center justify-between px-6 py-1 text-sm">
+          <div className="flex items-center gap-4">
+            <p className="flex items-center gap-1">
+              <FaIdBadge style={{ color: colors.orangeGold }} />
+              <span>UDYAMUP-28-0178874</span>
+            </p>
+            <p className="flex items-center gap-1">
+              <MdEmail style={{ color: colors.orangeGold }} />
+              <span>NCS ID:- E20I72-2318235108616</span>
+            </p>
+          </div>
 
-  {/* Mobile View: Phones left/right (second row) */}
-  <div className="flex justify-between w-full sm:w-auto">
-    {["+91 98113 67632 +91 78387 88389"].map((phone, idx) => (
-      <p key={idx} className="flex items-center gap-1 text-[10px] sm:text-sm">
-        <FaPhoneAlt style={{ color: colors.brightRed }} />
-        <a href={`tel:${phone}`} style={{ color: colors.whitePure }}>
-          {phone.replace("+91", "+91 ")}
-        </a>
-      </p>
-    ))}
-  </div>
-</div>
-
+          <div className="flex items-center gap-4">
+            <p className="flex items-center gap-1">
+              <FaPhoneAlt style={{ color: colors.brightRed }} />
+              <a href="tel:+919811367632" style={{ color: colors.whitePure }}>
+                +91 98113 67632
+              </a>
+            </p>
+            <p className="flex items-center gap-1">
+              <FaPhoneAlt style={{ color: colors.brightRed }} />
+              <a href="tel:+917838788389" style={{ color: colors.whitePure }}>
+                +91 78387 88389
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* 🔹 Main Navbar */}
@@ -132,7 +135,7 @@ const ModernNavbar = () => {
           </Link>
 
           {/* Nav Center */}
-          <ul className="hidden md:flex gap-8 text-sm font-medium uppercase">
+          <ul className="hidden md:flex gap-4 text-sm font-medium uppercase">
             {navItems.map((item) => (
               <li key={item.path}>
                 <Link to={item.path} style={navLinkStyle(item.path)}>
@@ -147,7 +150,11 @@ const ModernNavbar = () => {
           <div className="hidden md:flex items-center gap-3">
             {Object.entries(socialLinks).map(([k, url]) => {
               const Icon =
-                k === "facebook" ? FaFacebookF : k === "instagram" ? FaInstagram : FaLinkedinIn;
+                k === "facebook"
+                  ? FaFacebookF
+                  : k === "instagram"
+                  ? FaInstagram
+                  : FaLinkedinIn;
               return (
                 <a
                   key={k}
@@ -193,8 +200,11 @@ const ModernNavbar = () => {
             >
               {/* Mobile brand row */}
               <div className="flex justify-between items-center">
-                <Link to="/" style={{ color: colors.deepBlue, fontWeight: "bold" }}>
-                  Gautam Bamboo Chick Maker
+                <Link
+                  to="/"
+                  style={{ color: colors.deepBlue, fontWeight: "bold" }}
+                >
+                  Gaurav Bamboo Chick Maker
                 </Link>
                 <FaTimes
                   style={{ color: colors.blackPure }}
@@ -215,7 +225,10 @@ const ModernNavbar = () => {
                       display: "flex",
                       alignItems: "center",
                       gap: "6px",
-                      color: pathname === item.path ? colors.leafGreen : colors.blackPure,
+                      color:
+                        pathname === item.path
+                          ? colors.leafGreen
+                          : colors.blackPure,
                       fontWeight: pathname === item.path ? "600" : "400",
                     }}
                     onClick={toggleMenu}
@@ -225,6 +238,30 @@ const ModernNavbar = () => {
                   </Link>
                 ))}
               </nav>
+
+              {/* 🔹 Header Info (UDYAM, NCS, Phones) */}
+              <div className="mt-6 border-t pt-4 text-xs space-y-2">
+                <p className="flex items-center gap-2">
+                  <FaIdBadge style={{ color: colors.orangeGold }} />
+                  <span>UDYAMUP-28-0178874</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <MdEmail style={{ color: colors.orangeGold }} />
+                  <span>NCS ID:- E20I72-2318235108616</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <FaPhoneAlt style={{ color: colors.brightRed }} />
+                  <a href="tel:+919811367632" style={{ color: colors.blackPure }}>
+                    +91 98113 67632
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <FaPhoneAlt style={{ color: colors.brightRed }} />
+                  <a href="tel:+917838788389" style={{ color: colors.blackPure }}>
+                    +91 78387 88389
+                  </a>
+                </p>
+              </div>
 
               {/* WhatsApp Button */}
               <div className="mt-6">
@@ -249,12 +286,16 @@ const ModernNavbar = () => {
                 </a>
               </div>
 
-              {/* Social */}
+              {/* Social Icons */}
               <div className="mt-auto pt-4 border-t">
                 <div className="flex gap-3 mt-3">
                   {Object.entries(socialLinks).map(([k, url]) => {
                     const Icon =
-                      k === "facebook" ? FaFacebookF : k === "instagram" ? FaInstagram : FaLinkedinIn;
+                      k === "facebook"
+                        ? FaFacebookF
+                        : k === "instagram"
+                        ? FaInstagram
+                        : FaLinkedinIn;
                     return (
                       <a
                         key={k}
@@ -284,7 +325,10 @@ const ModernNavbar = () => {
             {/* Overlay */}
             <div
               className="flex-1"
-              style={{ background: "rgba(0,0,0,0.3)", backdropFilter: "blur(4px)" }}
+              style={{
+                background: "rgba(0,0,0,0.3)",
+                backdropFilter: "blur(4px)",
+              }}
               onClick={() => setIsMenuOpen(false)}
             />
           </div>

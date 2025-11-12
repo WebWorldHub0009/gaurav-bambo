@@ -20,7 +20,7 @@ const colors = {
 
 const teamMembers = [
   { name: "Gaurav", position: "Founder & Visionary", linkedin: "#" },
-  { name: "Gaurav", position: "Operations Head", linkedin: "#" },
+  
   { name: "Kanchan", position: "Creative Designer", linkedin: "#" },
   { name: "Anjali", position: "Finance & Accounts", linkedin: "#" },
   { name: "Rudra", position: "Quality Supervisor", linkedin: "#" },
