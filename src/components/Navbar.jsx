@@ -100,16 +100,11 @@ const ModernNavbar = () => {
           <div className="flex items-center gap-4">
             <p className="flex items-center gap-1">
               <FaPhoneAlt style={{ color: colors.brightRed }} />
-              <a href="tel:+919811367632" style={{ color: colors.whitePure }}>
-                +91 98113 67632
-              </a>
-            </p>
-            <p className="flex items-center gap-1">
-              <FaPhoneAlt style={{ color: colors.brightRed }} />
               <a href="tel:+917838788389" style={{ color: colors.whitePure }}>
-                +91 78387 88389
+                +91 7838788389
               </a>
             </p>
+         
           </div>
         </div>
       </div>
@@ -251,16 +246,11 @@ const ModernNavbar = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <FaPhoneAlt style={{ color: colors.brightRed }} />
-                  <a href="tel:+919811367632" style={{ color: colors.blackPure }}>
-                    +91 98113 67632
+                  <a href="tel:+91 7838788389" style={{ color: colors.blackPure }}>
+                    +91 7838788389
                   </a>
                 </p>
-                <p className="flex items-center gap-2">
-                  <FaPhoneAlt style={{ color: colors.brightRed }} />
-                  <a href="tel:+917838788389" style={{ color: colors.blackPure }}>
-                    +91 78387 88389
-                  </a>
-                </p>
+                
               </div>
 
               {/* WhatsApp Button */}

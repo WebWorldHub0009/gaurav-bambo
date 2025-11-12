@@ -215,7 +215,7 @@ export default function Footer() {
           </address>
           
 
-          {["+91 9811367632", "+91 7838788389"].map((num, i) => (
+          {["+91 7838788389"].map((num, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">
               <FaPhoneAlt style={{ color: colors.leafGreen }} />
               <a
