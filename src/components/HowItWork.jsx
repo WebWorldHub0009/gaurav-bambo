@@ -1,91 +1,101 @@
 // src/components/HowItWorks.jsx
 import React from "react";
-import { FaBug, FaShieldAlt, FaHandHoldingMedical, FaLeaf } from "react-icons/fa";
+import { FaCogs, FaPenFancy, FaLeaf, FaSyncAlt } from "react-icons/fa";
 
 const colors = {
-  deepBlue: "#234A8A",
-  brightRed: "#E8452D",
-  leafGreen: "#2BA44A",
-  darkGreen: "#00733B",
-  orangeGold: "#F4A300",
-  blackPure: "#000000",
-  whitePure: "#FFFFFF",
+  primary: "#1B5E20",
+  accent: "#A5D6A7",
+  white: "#ffffff",
 };
 
 const steps = [
   {
     id: 1,
-    title: "Identify the Requirement",
+    title: "Understanding Your Vision",
     description:
-      "We assess your bamboo needs with precision, understanding the products and designs you require.",
-    icon: <FaLeaf size={28} />,
+      "We understand your goals, space, and bamboo requirements to ensure the best outcome.",
+    icon: <FaPenFancy size={20} />,
   },
   {
     id: 2,
-    title: "Customized Design Plan",
+    title: "Concept & Design Strategy",
     description:
-      "Tailored bamboo solutions designed specifically for your farm or home setup, ensuring efficiency and aesthetics.",
-    icon: <FaShieldAlt size={28} />,
+      "We craft a personalized bamboo design blueprint with aesthetics and durability.",
+    icon: <FaCogs size={20} />,
   },
   {
     id: 3,
-    title: "Eco-Friendly Execution",
+    title: "Eco Craft & Installation",
     description:
-      "Our sustainable methods ensure high-quality bamboo installations while keeping the environment safe.",
-    icon: <FaHandHoldingMedical size={28} />,
+      "We use sustainable methods to install strong and visually pleasing bamboo structures.",
+    icon: <FaLeaf size={20} />,
   },
   {
     id: 4,
-    title: "Follow-Up & Maintenance",
+    title: "Support & Maintenance",
     description:
-      "We provide ongoing support and maintenance advice to keep your bamboo structures strong and lasting.",
-    icon: <FaLeaf size={28} />,
+      "We provide after-service support and guidance for long-lasting performance.",
+    icon: <FaSyncAlt size={20} />,
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-16 overflow-hidden" style={{ background: "linear-gradient(to bottom, #F0FFF4, #E6FAE9, #F9FAF6)" }}>
-      {/* Subtle floating shapes */}
-      <svg className="absolute top-0 left-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="100" fill={colors.leafGreen} />
-        {/* <circle cx="300" cy="200" r="150" fill={colors.leafGreen} /> */}
-        <circle cx="800" cy="100" r="120" fill={colors.leafGreen} />
-        {/* <circle cx="600" cy="400" r="200" fill={colors.leafGreen} /> */}
-      </svg>
+    <section
+      className="relative py-6 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(to bottom right, #F0FFF4, #E8F8EC, #F6FFF9)",
+      }}
+    >
+      {/* Background Glow Shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-5 left-5 w-40 h-40 bg-green-300 opacity-15 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-5 right-10 w-48 h-48 bg-green-200 opacity-20 rounded-full blur-3xl"></div>
+      </div>
 
       {/* Header */}
-      <div className="relative z-10 text-center mb-12 px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-blackPure">
-          How <span style={{ color: colors.brightRed }}>We</span> Works
+      <div className="relative z-10 text-center mb-4 px-6">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wide">
+          Our <span className="text-green-700">Process</span>
         </h2>
-        <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
-          A professional 4-step bamboo process that ensures durable, eco-friendly, and aesthetic solutions for your home or farm.
+        <p className="mt-1 text-gray-600 max-w-xl mx-auto text-base leading-relaxed">
+          A compact 4-step process for premium bamboo interior and construction work.
         </p>
       </div>
 
-      {/* Steps Grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-4 gap-8 px-6">
-        {steps.map((step) => (
-          <div
-            key={step.id}
-            className="relative flex flex-col items-center text-center p-8 rounded-2xl bg-whitePure border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-300"
-          >
-            {/* Floating Icon */}
+      {/* Timeline */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4">
+        <div className="border-l-2 border-green-500/30 ml-4 md:ml-8">
+          {steps.map((step) => (
             <div
-              className="w-16 h-16 rounded-full flex items-center justify-center mb-5 shadow-md"
-              style={{ backgroundColor: colors.leafGreen, color: colors.whitePure }}
+              key={step.id}
+              className="relative mb-3 md:mb-14 pl-6 md:pl-10 group"
             >
-              {step.icon}
+              {/* Dot */}
+              <div className="absolute -left-3 md:-left-5 top-1 w-6 h-6 bg-white rounded-full shadow border-2 border-green-600 flex items-center justify-center text-green-700 text-sm">
+                {step.icon}
+              </div>
+
+              {/* Glass Card */}
+              <div
+                className="
+                  backdrop-blur-xl bg-white/20 border border-white/30 
+                  rounded-xl p-2 md:p-4 shadow 
+                  transition-all duration-300 
+                  group-hover:bg-white/30 group-hover:shadow-xl
+                "
+              >
+                <h3 className=" font-semibold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
             </div>
-
-            {/* Title */}
-            <h3 className="text-lg font-semibold text-blackPure mb-3">{step.title}</h3>
-
-            {/* Description */}
-            <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

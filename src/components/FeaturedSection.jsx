@@ -1,178 +1,116 @@
 // src/components/FeaturedSection.jsx
 import React from "react";
-import { motion } from "framer-motion";
-import model from "../assets/home/b4.jpg"; // left showcase image
-import product from "../assets/home/b2.jpg"; // right showcase image
-import { FaLeaf } from "react-icons/fa";
+import product from "../assets/home/na2.jpg";
 import { Link } from "react-router-dom";
 
-// Color Palette
+// Horizon Projects Color Palette
 const colors = {
-  deepBlue: "#234A8A",
-  brightRed: "#E8452D",
-  leafGreen: "#2BA44A",
-  darkGreen: "#00733B",
-  orangeGold: "#F4A300",
-  blackPure: "#000000",
-  whitePure: "#FFFFFF",
+  darkBlue: "#0A1626",
+  accentGold: "#FACC15",
+  graySoft: "#4A4A4A",
+  white: "#FFFFFF",
 };
 
 const FeaturedSection = () => {
   return (
-    <section className="relative w-full py-14 px-6 overflow-hidden">
-      {/* Decorative SVG Background */}
-      <div className="absolute inset-0 -z-10 opacity-10">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 200 200"
-          className="w-full h-full"
-          preserveAspectRatio="xMidYMid slice"
-        >
-          <defs>
-            <pattern
-              id="bamboo-pattern"
-              x="0"
-              y="0"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-            >
-              <rect width="40" height="40" fill={colors.whitePure} />
-              <path
-                d="M10 0v40M30 0v40"
-                stroke={colors.leafGreen}
-                strokeWidth="2"
-                opacity="0.6"
-              />
-              <circle cx="20" cy="20" r="6" fill={colors.orangeGold} opacity="0.4" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#bamboo-pattern)" />
-        </svg>
+    <section className="relative w-full py-20 px-6 overflow-hidden bg-[#f5ede3]">
+      
+      {/* Soft Gradient Background Glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute w-[700px] h-[700px] bg-[#FACC15] opacity-[0.10] blur-[180px] -top-20 -left-20"></div>
+        <div className="absolute w-[600px] h-[600px] bg-[#ffffff] opacity-[0.08] blur-[160px] bottom-0 right-0"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-14">
-        {/* Left Image Block */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="relative w-full max-w-md"
-        >
-          <img
-            src={model}
-            alt="Bamboo craftsman at work"
-            className="rounded-2xl h-[500px] md:h-[420px] shadow-2xl object-cover w-full"
-          />
-          {/* Badge */}
-          <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-full shadow flex items-center gap-2 text-sm font-semibold text-gray-800">
-            <FaLeaf className="text-[#2BA44A]" />
-            <span className="text-[13px] font-['Orbitron']">
-              100% Eco-Friendly
-            </span>
-          </div>
-        </motion.div>
+      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+        
+        {/* Left Image - Premium Look */}
+        <div className="w-full max-w-md">
+          <div className="relative">
+            <img
+              src={product}
+              alt="Luxury Interior Design"
+              className="rounded-3xl h-[380px] w-full object-cover shadow-[0px_0px_40px_rgba(250,204,21,0.20)]"
+            />
 
-        {/* Center Text Block */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center lg:text-left max-w-xl"
-        >
-          {/* Section Heading with Quote */}
-          <div className="mb-6">
-            <h3
-              className="text-lg italic tracking-wide"
-              style={{
-                fontFamily: "Italiana, serif",
-                color: colors.darkGreen,
-              }}
-            >
-              “Natural Craftsmanship. Timeless Comfort.”
-            </h3>
+            {/* Gold Floating Tag */}
+            <div className="absolute -bottom-4 -right-4 bg-[#FACC15] text-black font-bold px-6 py-2 rounded-xl shadow-xl text-sm tracking-wide uppercase">
+              Interior Luxury
+            </div>
           </div>
+        </div>
 
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-6 leading-snug"
+        {/* Right Text Block */}
+        <div className="max-w-xl text-center lg:text-left">
+
+          {/* Tagline */}
+          <h3
+            className="text-lg tracking-wide mb-4"
             style={{
+              color: colors.accentGold,
               fontFamily: "Italiana, serif",
-              color: colors.deepBlue,
             }}
           >
-            Bringing{" "}
-            <span style={{ color: colors.orangeGold }}>Artistry</span> to{" "}
-            <span style={{ color: colors.leafGreen }}>Every Home</span>
+            “Luxury Crafted • Spaces Elevated”
+          </h3>
+
+          {/* Main Heading */}
+          <h2
+            className="text-4xl md:text-5xl font-bold leading-snug mb-6"
+            style={{
+              color: colors.darkBlue,
+              fontFamily: "Italiana, serif",
+            }}
+          >
+            Transforming Spaces with  
+            <span style={{ color: colors.accentGold }}> Precision</span> &  
+            <span style={{ color: colors.graySoft }}> Elegance</span>
           </h2>
 
+          {/* Description */}
           <p
-            className="text-base md:text-lg leading-relaxed tracking-wide mb-8"
+            className="text-base md:text-lg leading-relaxed mb-10"
             style={{
-              fontFamily: "Orbitron, sans-serif",
-              color: "#444",
+              color: "#383838",
+              fontFamily: "Inter, sans-serif",
             }}
           >
-            At{" "}
-            <b style={{ color: colors.brightRed }}>Gaurav Bamboo Chick Maker</b>,
-            we believe in turning simplicity into elegance. Our bamboo chicks and blinds
-            are handcrafted with precision, blending{" "}
-            <span style={{ color: colors.deepBlue }}>traditional techniques</span>{" "}
-            with{" "}
-            <span style={{ color: colors.orangeGold }}>
-              modern aesthetics
-            </span>
-            . Each piece adds a touch of{" "}
-            <span style={{ color: colors.leafGreen }}>natural charm</span> and{" "}
-            <span style={{ color: colors.brightRed }}>lasting durability</span>{" "}
-            to your interiors — creating beauty that breathes with nature.
+            At <b style={{ color: colors.accentGold }}>Horizon Projects</b>,
+            we design and build interiors that represent luxury, depth,
+            and timeless architecture. Every space is carefully crafted
+            with premium materials, modern design, and exclusive detailing —
+            ensuring your environment reflects sophistication and long-lasting beauty.
           </p>
 
-          {/* CTA Buttons */}
+          {/* Buttons */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-5">
-            <Link to="/gallery">
+            <Link to="/projects">
               <button
-                className="px-7 py-3 cursor-pointer border-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="px-8 py-3 rounded-full border-2 font-semibold transition-all duration-300 hover:scale-105"
                 style={{
-                  borderColor: colors.deepBlue,
-                  color: colors.deepBlue,
-                  fontFamily: "Zen Dots, sans-serif",
+                  borderColor: colors.accentGold,
+                  color: colors.darkBlue,
+                  fontFamily: "Orbitron, sans-serif",
                 }}
               >
-                Explore Our Collection
+                View Our Projects
               </button>
             </Link>
 
             <Link to="/contact">
               <button
-                className="px-7 py-3 rounded-full cursor-pointer font-semibold shadow-lg transition-all duration-300 hover:scale-105"
+                className="px-8 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105"
                 style={{
-                  backgroundColor: colors.orangeGold,
-                  color: colors.whitePure,
-                  fontFamily: "Zen Dots, sans-serif",
+                  backgroundColor: colors.accentGold,
+                  color: colors.darkBlue,
+                  fontFamily: "Orbitron, sans-serif",
                 }}
               >
-                Get a Free Quote
+                Get a Consultation
               </button>
             </Link>
           </div>
-        </motion.div>
 
-        {/* Right Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="w-full max-w-sm"
-        >
-          <img
-            src={product}
-            alt="Premium bamboo chick blinds"
-            className="rounded-2xl h-[320px] shadow-xl object-cover w-full"
-          />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

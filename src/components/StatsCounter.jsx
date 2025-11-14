@@ -77,94 +77,43 @@ const StatsSection = () => {
     <section className="relative py-10 px-6 md:px-20 bg-gray-50">
       {/* Heading */}
       <div className="max-w-4xl mx-auto text-center mb-5">
-        <h2
-          className="text-sm tracking-widest uppercase mb-3"
-          style={{
-            fontFamily: "Orbitron, sans-serif",
-            color: colors.brightRed,
-          }}
-        >
-          Gaurav Bamboo Chick Maker
-        </h2>
-        <h3
-          className="text-4xl md:text-5xl font-bold leading-snug mb-5"
-          style={{
-            fontFamily: "Italiana, serif",
-            color: colors.blackPure,
-          }}
-        >
-          Redefining{" "}
-          <span style={{ color: colors.leafGreen }}>Sustainability</span> with{" "}
-          <span style={{ color: colors.orangeGold }}>Elegance</span>
-        </h3>
-        <p
-          className="text-base md:text-lg italic"
-          style={{
-            fontFamily: "Orbitron, sans-serif",
-            color: colors.darkGray,
-          }}
-        >
-          Handcrafted bamboo chicks designed to add comfort, style, and a touch of
-          nature to your living spaces.
-        </p>
+       <h2
+  className="text-sm tracking-widest uppercase mb-3"
+  style={{
+    fontFamily: "Orbitron, sans-serif",
+    color: colors.brightRed,
+  }}
+>
+  Our Expertise
+</h2>
+
+<h3
+  className="text-4xl md:text-5xl font-bold leading-snug mb-5"
+  style={{
+    fontFamily: "Italiana, serif",
+    color: colors.blackPure,
+  }}
+>
+  Crafting Premium{" "}
+  <span style={{ color: colors.leafGreen }}>Bamboo Solutions</span>{" "}
+  with{" "}
+  <span style={{ color: colors.orangeGold }}>Precision</span>
+</h3>
+
+<p
+  className="text-base md:text-lg italic"
+  style={{
+    fontFamily: "Orbitron, sans-serif",
+    color: colors.darkGray,
+  }}
+>
+  From traditional bamboo chicks to modern eco-friendly installations,  
+  we deliver long-lasting craftsmanship built for comfort and style.
+</p>
+
       </div>
 
-      {/* Brand Highlight */}
-      <div className="grid md:grid-cols-2 gap-10 items-center mb-10 max-w-6xl mx-auto">
-        <div className="text-left">
-          <h2
-            className="text-6xl mb-4"
-            style={{
-              fontFamily: "Zen Dots, sans-serif",
-              color: colors.orangeGold,
-            }}
-          >
-            20+
-          </h2>
-          <p
-            className="leading-relaxed text-lg"
-            style={{
-              fontFamily: "Orbitron, sans-serif",
-              color: colors.darkGray,
-            }}
-          >
-            For over{" "}
-            <span className="font-semibold" style={{ color: colors.blackPure }}>
-              two decades
-            </span>
-            , <b style={{ color: colors.brightRed }}>Gaurav Bamboo Chick Maker</b> has
-            been delivering trusted, durable, and beautiful bamboo products that
-            reflect both{" "}
-            <span style={{ color: colors.leafGreen }}>craftsmanship</span> and{" "}
-            <span style={{ color: colors.orangeGold }}>quality</span>.
-          </p>
-        </div>
-        <div className="flex items-center justify-end gap-4">
-          <img
-            src={logo}
-            alt="Company Logo"
-            className="w-24 h-24 rounded-full shadow-xl border-2"
-            style={{ borderColor: colors.orangeGold }}
-          />
-          <div>
-            <p
-              className="font-semibold text-xl"
-              style={{ fontFamily: "Italiana, serif", color: colors.blackPure }}
-            >
-              Gaurav Bamboo
-            </p>
-            <p
-              className="text-sm"
-              style={{
-                fontFamily: "Orbitron, sans-serif",
-                color: colors.darkGray,
-              }}
-            >
-              Chick Maker
-            </p>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">

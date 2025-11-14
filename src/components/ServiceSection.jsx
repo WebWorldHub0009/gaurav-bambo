@@ -1,14 +1,14 @@
 // src/components/Product.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 import bambooJafhari from "../assets/product/jaf.jpg";
-import dwali from "../assets/product/dchick.jpg"
-import kabutar from "../assets/product/pigeon.jpg"
-import roller from "../assets/home/bh2.jpg"
-import bambo from "../assets/product/hut.jpg"
-import fchick from "../assets/product/fchick.jpg"
-// import bg from "../assets/home/sbg.jpg";
+import dwali from "../assets/product/dchick.jpg";
+import kabutar from "../assets/product/pigeon.jpg";
+import roller from "../assets/home/bh2.jpg";
+import bambo from "../assets/product/hut.jpg";
+import fchick from "../assets/product/fchick.jpg";
 
 const colors = {
   deepBlue: "#234A8A",
@@ -21,85 +21,119 @@ const colors = {
 };
 
 const products = [
-  { title: "Bamboo Jafhari", slug: "bamboo-jafhari", imgSrc: bambooJafhari, description: "High-quality bamboo jafhari for strong and durable construction." },
-  { title: "Design Wali Chick", slug: "design-wali-chick", imgSrc: dwali, description: "Elegant design wali chick to enhance aesthetics and functionality." },
-  { title: "Kabutar Jali", slug: "kabutar-jali", imgSrc: kabutar, description: "Premium kabutar jali to protect your poultry while ensuring ventilation." },
-  { title: "Roller Blind", slug: "roller-blind", imgSrc: roller, description: "Durable roller blinds for versatile and efficient shading solutions." },
-  { title: "Bamboo Huts", slug: "bamboo-huts", imgSrc: bambo, description: "Sturdy bamboo huts perfect for outdoor setups and farm usage." },
-  { title: "Bird Net & Fancy Chick Maker", slug: "bird-net-fancy-chick-maker", imgSrc: fchick, description: "Eco-friendly bird nets and fancy chick makers for secure and organized farming." },
+  {
+    title: "Bamboo Jafhari",
+    slug: "bamboo-jafhari",
+    imgSrc: bambooJafhari,
+    description:
+      "Premium-grade bamboo jafhari designed for long-lasting outdoor and indoor coverage with exceptional durability.",
+  },
+  {
+    title: "Design Wali Chick",
+    slug: "design-wali-chick",
+    imgSrc: dwali,
+    description:
+      "Stylish designer bamboo chicks crafted for homes, balconies, and shops for privacy and aesthetic appeal.",
+  },
+  {
+    title: "Kabutar Jali",
+    slug: "kabutar-jali",
+    imgSrc: kabutar,
+    description:
+      "Strong kabutar jali designed to protect open spaces from birds while allowing full ventilation.",
+  },
+  {
+    title: "Roller Blind",
+    slug: "roller-blind",
+    imgSrc: roller,
+    description:
+      "Modern roller blinds suitable for windows, offices, and balconies with premium shading quality.",
+  },
+  {
+    title: "Bamboo Huts",
+    slug: "bamboo-huts",
+    imgSrc: bambo,
+    description:
+      "Naturally insulated bamboo huts perfect for farmhouses, resorts, and outdoor setups.",
+  },
+  {
+    title: "Bird Net & Fancy Chick Maker",
+    slug: "bird-net-fancy-chick-maker",
+    imgSrc: fchick,
+    description:
+      "High-quality bird nets and fancy chick blinds crafted for safety, durability, and professional use.",
+  },
 ];
 
 export default function Product() {
   return (
-    <section
-      className="relative py-8 text-center bg-fixed bg-cover bg-center"
-     
-    >
-      
+    <section className="relative py-14 text-center bg-white">
+      <div className="relative z-10 px-4 max-w-7xl mx-auto">
 
-      <div className="relative z-10 px-4 max-w-6xl mx-auto">
+        {/* Heading */}
         <h2
           className="uppercase tracking-wider text-sm font-bold"
           style={{ color: colors.brightRed }}
         >
           Our <span style={{ color: colors.orangeGold }}>Products</span>
         </h2>
+
         <h3
-          className="text-3xl sm:text-5xl font-bold mt-3"
+          className="text-3xl sm:text-5xl font-bold mt-3 leading-snug"
           style={{ color: colors.blackPure }}
         >
-          Trusted{" "}
+          Premium{" "}
           <span style={{ color: colors.leafGreen }}>Bamboo Solutions</span> by
           Gaurav Bamboo Chick Maker.
         </h3>
-        <p className="text-gray-700 max-w-3xl mx-auto mt-5 mb-8">
-          Explore our premium bamboo products designed for durability,
-          functionality, and elegance. Click any product below for full details.
+
+        <p className="text-gray-700 max-w-3xl mx-auto mt-4 mb-12">
+          Explore our complete range of handcrafted bamboo products designed for
+          durability, beauty, and long-term performance.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        {/* PRODUCT GRID – NEW CLEAN LAYOUT */}
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, idx) => (
-            <div
+            <Link
+              to={`/products/${product.slug}`}
               key={idx}
-              className="relative bg-white/30 bg-opacity-95 shadow-xl rounded-2xl p-5 w-80 flex flex-col items-center hover:shadow-2xl hover:scale-105 transition-transform duration-500"
+              className="group relative w-full h-72 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
             >
-              {/* Image with lazy loading */}
-              {product.imgSrc && (
-                <img
-                  src={product.imgSrc}
-                  alt={product.title}
-                  loading="lazy"
-                  className="w-full h-52 object-cover rounded-xl shadow-md"
-                />
-              )}
+              {/* Background Image */}
+              <img
+                src={product.imgSrc}
+                alt={product.title}
+                className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+              />
 
-              <h4 className="text-lg uppercase font-bold text-gray-800 mt-6">
-                {product.title}
-              </h4>
-              <p className="text-sm text-gray-600 mt-1 mb-3 line-clamp-2">
-                {product.description}
-              </p>
-              <Link
-                to={`/products/${product.slug}`}
-                className="px-6 py-2 rounded-full text-whitePure font-semibold"
-                style={{
-                  background: `linear-gradient(90deg, ${colors.deepBlue}, ${colors.darkGreen})`,
-                }}
-              >
-                Show More
-              </Link>
-            </div>
+              {/* Arrow Icon */}
+              <div className="absolute top-4 right-4 bg-white/70 p-2 rounded-full shadow-md backdrop-blur-md">
+                <FaArrowRight className="text-gray-800 text-[18px]" />
+              </div>
+
+              {/* Text Content */}
+              <div className="absolute left-5 bottom-5 text-left max-w-[80%]">
+                <h4 className="text-2xl font-bold text-white drop-shadow-xl">
+                  {product.title}
+                </h4>
+                <p className="text-white text-sm mt-2 drop-shadow-xl line-clamp-2">
+                  {product.description}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
 
-        <p className="mt-12 text-gray-700">
-          Don’t wait, contact us for more products and inquiries.{" "}
+        {/* Bottom text */}
+        <p className="mt-10 text-gray-700">
+          Need any custom bamboo work?{" "}
           <Link
             to={"/contact"}
             className="underline font-medium"
             style={{ color: colors.brightRed }}
           >
-            Book Online
+            Contact Us
           </Link>
         </p>
       </div>

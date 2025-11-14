@@ -5,71 +5,75 @@ import {
   FaShieldAlt,
   FaLeaf,
   FaStar,
-  FaCheckCircle,
-  FaClock,
-  FaCertificate,
   FaPagelines,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 export default function WeSecureBadge() {
   return (
-    <section className="w-full bg-gradient-to-r from-[#0a0a0a] via-[#111111] to-[#0a0a0a] py-6 px-6 md:px-16 font-[Poppins] relative overflow-hidden">
-      {/* Subtle glowing particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="w-3 h-3 bg-[#9acd32] rounded-full absolute animate-ping"
-          style={{ top: "20%", left: "18%" }}
-        ></div>
-        <div
-          className="w-2 h-2 bg-[#32cd32] rounded-full absolute animate-pulse"
-          style={{ top: "45%", left: "75%" }}
-        ></div>
-        <div
-          className="w-2 h-2 bg-[#9acd32] rounded-full absolute animate-pulse"
-          style={{ top: "75%", left: "35%" }}
-        ></div>
+    <section className="w-full bg-gradient-to-br from-[#050505] via-[#0b0b0b] to-[#050505] py-10 px-6 md:px-16 font-[Poppins] relative overflow-hidden">
+
+      {/* Premium Glow Background */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute w-64 h-64 bg-[#b4ff58] blur-[120px] rounded-full top-10 left-10"></div>
+        <div className="absolute w-72 h-72 bg-[#7cff4f] blur-[150px] rounded-full bottom-10 right-10"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between bg-[#1a1a1a]/90 border border-[#32cd32]/40 shadow-2xl rounded-2xl px-8 lg:px-14 py-6 backdrop-blur-md relative z-10 gap-10">
-        {/* Left Content */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between bg-[#0f0f0f]/80 border border-[#aaff66]/20 shadow-[0_0_40px_#1a1a1a] rounded-3xl px-10 py-10 backdrop-blur-xl relative z-10 gap-12">
+
+        {/* LEFT CONTENT */}
         <div className="text-center lg:text-left max-w-3xl">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-cursive2 font-bold text-[#9acd32] tracking-wide flex flex-col sm:flex-row sm:flex-wrap items-center justify-center lg:justify-start gap-3 mb-5">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wide text-[#beff6c] flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-6">
+
             <span className="flex items-center gap-2">
-              <FaShieldAlt /> Durable
+              <FaShieldAlt className="text-[#beff6c]" />
+              Durable
             </span>
-            <span className="hidden sm:inline">•</span>
+
+            <span className="hidden sm:block">•</span>
+
             <span className="flex items-center gap-2">
-              <FaLeaf /> Eco-Friendly
+              <FaLeaf className="text-[#beff6c]" />
+              Eco-Friendly
             </span>
-            <span className="hidden sm:inline">•</span>
+
+            <span className="hidden sm:block">•</span>
+
             <span className="flex items-center gap-2">
-              <FaStar /> Premium Bamboo Craft
+              <FaStar className="text-[#beff6c]" />
+              Premium Craft
             </span>
           </h3>
 
-          {/* Premium Lines */}
-          <p className="text-gray-300 text-sm sm:text-base font-raleway leading-relaxed">
-            At{" "}
-            <span className="font-cursive1 text-[#9acd32]">
+          <p className="text-gray-300 text-sm sm:text-lg leading-relaxed font-light">
+            Welcome to{" "}
+            <span className="text-[#beff6c] font-semibold">
               Gaurav Bamboo Chicks Maker
             </span>
-            , we don’t just make products — we craft{" "}
-            <span className="text-[#9acd32] font-cursive1">heritage in bamboo</span>.  
-            Every chick, net, and hut is designed to blend{" "}
-            <span className="text-[#9acd32] font-cursive1">strength</span>,{" "}
-            <span className="text-[#9acd32] font-cursive1">sustainability</span>, 
-            and <span className="text-[#9acd32] font-cursive1">style</span>, trusted by
-            homes and businesses across India.
+            — where craftsmanship meets sustainability.  
+            Each bamboo chick, net, and hut is built with{" "}
+            <span className="text-[#beff6c] font-semibold">precision</span>,{" "}
+            <span className="text-[#beff6c] font-semibold">strength</span>, and{" "}
+            <span className="text-[#beff6c] font-semibold">
+              long-lasting durability
+            </span>.
+            <br /><br />
+            Our products are trusted by homes, offices, restaurants, showrooms,
+            and premium eco-living spaces across India.  
+            We focus on creating timeless designs that elevate your interiors
+            while protecting nature.
           </p>
-
-         
         </div>
 
-        {/* Right CTA Button */}
-        <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+        {/* CTA BUTTON */}
+        <div className="flex w-full lg:w-auto justify-center lg:justify-end">
           <Link
             to="/contact"
-            className="px-10 py-3 text-base sm:text-lg font-body rounded-full bg-gradient-to-r from-[#9acd32] to-[#32cd32] text-black font-semibold hover:scale-105 transition-transform duration-300 shadow-xl hover:shadow-2xl"
+            className="px-10 py-3 text-lg font-semibold rounded-full 
+            bg-gradient-to-r from-[#beff6c] to-[#9aff4d] text-black
+            shadow-[0_8px_25px_rgba(150,255,100,0.5)]
+            hover:shadow-[0_12px_35px_rgba(150,255,100,0.7)]
+            hover:scale-[1.05] transition-all duration-300"
           >
             Get Your Bamboo Solution
           </Link>

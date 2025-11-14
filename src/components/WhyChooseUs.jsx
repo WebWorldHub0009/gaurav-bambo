@@ -1,206 +1,165 @@
-import React, { useState } from "react";
+// src/components/WhyChooseUs.jsx
+import React from "react";
+import { motion } from "framer-motion";
 import {
-  FaLeaf,
   FaRecycle,
   FaHome,
-  FaSmileBeam,
   FaMoneyCheckAlt,
   FaTruck,
-  FaStar,
-  FaAngleDown,
 } from "react-icons/fa";
 
 const colors = {
   deepBlue: "#234A8A",
   brightRed: "#E8452D",
-  leafGreen: "#2BA44A",
-  darkGreen: "#00733B",
-  orangeGold: "#F4A300",
-  blackPure: "#000000",
-  whitePure: "#FFFFFF",
+  green: "#2BA44A",
+  orange: "#F4A300",
+  gray: "#6B7280",
 };
 
-const features = [
+const reasons = [
   {
-    title: "Eco-Friendly Crafting",
-    icon: FaRecycle,
-    color: colors.leafGreen,
-    short: "Handmade with sustainable bamboo.",
-    description:
-      "At Gaurav Bamboo Chick Maker, every product is crafted with eco-conscious methods that respect nature and promote sustainability.",
-    animation: "animate-bounce",
+    id: 1,
+    icon: <FaRecycle className="text-3xl mb-3" style={{ color: colors.green }} />,
+    title: "Eco-Friendly Craftsmanship",
+    desc: "Each bamboo blind is handcrafted using natural materials ensuring sustainability and long-term durability.",
   },
   {
+    id: 2,
+    icon: <FaTruck className="text-3xl mb-3" style={{ color: colors.deepBlue }} />,
     title: "Fast & Reliable Delivery",
-    icon: FaTruck,
-    color: colors.darkGreen,
-    short: "We bring bamboo elegance to your door.",
-    description:
-      "Our team ensures hassle-free delivery and installation of bamboo chicks, giving you a premium experience without delays.",
-    animation: "animate-spin-slow",
+    desc: "We provide smooth, fast and doorstep delivery across all major cities with utmost care.",
   },
   {
-    title: "Fair & Transparent Pricing",
-    icon: FaMoneyCheckAlt,
-    color: colors.orangeGold,
-    short: "Luxury bamboo at the best price.",
-    description:
-      "We provide fair, transparent, and competitive pricing while ensuring the finest craftsmanship in every product.",
-    animation: "jump-rotate",
+    id: 3,
+    icon: <FaMoneyCheckAlt className="text-3xl mb-3" style={{ color: colors.orange }} />,
+    title: "Honest & Affordable Pricing",
+    desc: "Premium quality at affordable rates — complete transparency without hidden charges.",
   },
   {
-    title: "Trusted Craftsmanship",
-    icon: FaHome,
-    color: colors.deepBlue,
-    short: "Decorating homes with elegance.",
-    description:
-      "From traditional bamboo curtains to modern chick blinds, our designs are trusted by thousands of families and businesses.",
-    animation: "animate-bounce",
-  },
-  {
-    title: "Sustainable Lifestyle",
-    icon: FaLeaf,
-    color: colors.leafGreen,
-    short: "Eco-living through bamboo.",
-    description:
-      "Every installation reduces reliance on artificial materials, helping you embrace a lifestyle closer to nature.",
-    animation: "animate-spin-slow",
-  },
-  {
-    title: "Customer Satisfaction",
-    icon: FaSmileBeam,
-    color: colors.brightRed,
-    short: "We value your happiness.",
-    description:
-      "With premium service, friendly staff, and high-quality bamboo, customer satisfaction is always our top priority.",
-    animation: "animate-bounce",
+    id: 4,
+    icon: <FaHome className="text-3xl mb-3" style={{ color: colors.brightRed }} />,
+    title: "Premium Custom Designs",
+    desc: "Traditional to modern — our custom bamboo chick designs enhance interior beauty instantly.",
   },
 ];
 
-// Custom animations
-const styles = `
-  @keyframes spin-slow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .animate-spin-slow {
-    animation: spin-slow 6s linear infinite;
-  }
-
-  @keyframes jump-rotate {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(15deg); }
-  }
-  .jump-rotate {
-    animation: jump-rotate 2.5s infinite ease-in-out;
-  }
-
-  @keyframes float-blink {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translateY(5px);
-      opacity: 0.5;
-    }
-  }
-  .float-blink {
-    animation: float-blink 1.8s infinite ease-in-out;
-  }
-`;
-
-const WhyChooseUs = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
+export default function WhyChooseUs() {
   return (
-    <>
-      <style>{styles}</style>
+    <section
+      className="relative py-10 px-6 md:px-16 overflow-hidden"
+      style={{ fontFamily: "Poppins, sans-serif", background: "#ffffff" }}
+    >
+      {/* Background SVG Pattern */}
+      <svg
+        className="absolute inset-0 w-full h-full opacity-20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <pattern id="waves" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+            <path
+              d="M0 50 Q 50 0 100 50 T 200 50"
+              stroke="#c8c8c8"
+              strokeWidth="1"
+              fill="none"
+            />
+            <path
+              d="M0 150 Q 50 100 100 150 T 200 150"
+              stroke="#c8c8c8"
+              strokeWidth="1"
+              fill="none"
+            />
+          </pattern>
+        </defs>
 
-      <section className="relative py-10 px-6 lg:px-20 bg-gradient-to-br from-[#ffffff] via-[#f9f9f9] to-[#f4f4f4] text-gray-800 overflow-hidden">
-        {/* Decorative Shapes */}
-        <div className="absolute top-0 left-0 w-[220px] h-[220px] bg-[#2BA44A22] rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#234A8A22] rounded-full blur-3xl"></div>
+        <rect width="100%" height="100%" fill="url(#waves)" />
+      </svg>
 
-        {/* Heading */}
-        <div className="text-center mb-16 relative z-10">
-          
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-wide">
-            Why Choose{" "}
-            <span style={{ color: colors.leafGreen }}>
-              Us?
+      {/* CONTENT WRAPPER */}
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-10 mb-7">
+          {/* Left Title */}
+          <div>
+            <h2
+              className="text-[32px] font-bold leading-none mb-2"
+              style={{
+                fontFamily: "Italiana, serif",
+                color: colors.brightRed,
+              }}
+            >
+              GBCM
+            </h2>
+
+            <h3
+              className="text-3xl md:text-6xl font-semibold uppercase tracking-wide"
+              style={{ color: colors.deepBlue }}
+            >
+              Why Choose Us
+            </h3>
+          </div>
+
+          {/* Intro Text */}
+          <div className="max-w-2xl text-gray-700 leading-relaxed text-[15px]">
+            At{" "}
+            <span style={{ color: colors.green, fontWeight: "600" }}>
+              Gaurav Bamboo Chick Maker
             </span>
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto">
-            We create bamboo chick blinds that are elegant, eco-friendly, and
-            built to last. Here’s why families and businesses trust our
-            craftsmanship.
-          </p>
+            , we merge traditional craftsmanship with innovative design to
+            create premium bamboo blinds that elevate your home and workspace.
+          </div>
         </div>
 
-        {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-          {features.map((item, index) => {
-            const Icon = item.icon;
-            const isOpen = openIndex === index;
+        {/* CARDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {reasons.map((reason, idx) => (
+            <motion.div
+              key={reason.id}
+              className="
+                group 
+                relative 
+                overflow-hidden 
+                p-6 
+               
+                hover:shadow-[0_12px_40px_rgb(0,0,0,0.12)]
+                transition-all duration-500 cursor-pointer
+              "
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              viewport={{ once: true }}
+            >
+              {/* Hover Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[#e8452d15] opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
-            return (
-              <div
-                key={index}
-                onClick={() => toggle(index)}
-                className="cursor-pointer p-6 bg-white border border-gray-200 hover:border-[#2BA44A] rounded-2xl shadow-md hover:shadow-2xl transition-all group relative overflow-hidden"
+              {/* Icon */}
+              <div className="mb-3 relative z-10">{reason.icon}</div>
+
+              {/* Title */}
+              <h4
+                className="
+                  text-xl 
+                  font-semibold 
+                  mb-3 
+                  relative 
+                  z-10 
+                  group-hover:text-green-700 
+                  transition-colors duration-300
+                "
+                style={{ fontFamily: "Italiana, serif", color: colors.brightRed }}
               >
-                {/* Down arrow */}
-                {!isOpen && (
-                  <FaAngleDown
-                    className="absolute top-4 right-4 text-lg md:text-xl float-blink"
-                    style={{ color: colors.orangeGold }}
-                  />
-                )}
+                {reason.title}
+              </h4>
 
-                {/* Icon + Title */}
-                <div className="flex items-center gap-4 mb-3">
-                  <div
-                    className={`p-4 rounded-full border-2 border-dashed shadow-sm ${item.animation}`}
-                    style={{ borderColor: item.color, background: "#f9f9f9" }}
-                  >
-                    <Icon
-                      className="text-2xl"
-                      style={{ color: item.color }}
-                    />
-                  </div>
-                  <h3
-                    className="text-lg font-semibold"
-                    style={{ color: colors.blackPure }}
-                  >
-                    {item.title}
-                  </h3>
-                </div>
-
-                {/* Short Description */}
-                <p className="text-sm text-gray-600">{item.short}</p>
-
-                {/* Full Description */}
-                <div
-                  className={`text-sm mt-3 transition-all duration-500 leading-relaxed ${
-                    isOpen
-                      ? "max-h-60 opacity-100 text-gray-700"
-                      : "max-h-0 opacity-0 overflow-hidden"
-                  }`}
-                >
-                  {item.description}
-                </div>
-              </div>
-            );
-          })}
+              {/* Description */}
+              <p className="text-sm text-gray-700 leading-relaxed relative z-10">
+                {reason.desc}
+              </p>
+            </motion.div>
+          ))}
+         
         </div>
-      </section>
-    </>
+      </div>
+      <hr />
+    </section>
   );
-};
-
-export default WhyChooseUs;
+}

@@ -1,20 +1,17 @@
 // src/components/ContactHero.jsx
 import React from "react";
-import bg from "../assets/product/about.jpg"; // static import
+import bg from "../assets/home/n2.jpg";
 
 const colors = {
-  deepBlue: "#234A8A",
-  brightRed: "#E8452D",
-  leafGreen: "#2BA44A",
-  darkGreen: "#00733B",
-  orangeGold: "#F4A300",
-  blackPure: "#000000",
-  whitePure: "#FFFFFF",
+  goldSoft: "#F4A300",
+  greenSoft: "#2BA44A",
+  deepBlue: "#1A304A",
+  white: "#FFFFFF",
 };
 
 export default function ContactHero() {
   return (
-    <section className="relative w-full h-[80vh] sm:h-[70vh] flex items-center justify-center font-[Italiana]">
+    <section className="relative w-full h-[80vh] flex items-end pb-16 font-[Inter]">
       {/* Background */}
       <img
         src={bg}
@@ -24,50 +21,54 @@ export default function ContactHero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/65"></div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-2xl sm:max-w-4xl">
+ 
+
+      {/* Bottom-Left Content */}
+      <div className="relative z-10 px-6 md:px-14 max-w-2xl text-left">
+        {/* Heading */}
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug"
-          style={{ color: colors.whitePure, fontFamily: "Zen Dots" }}
+          className="text-3xl md:text-5xl font-bold leading-snug mb-4"
+          style={{ fontFamily: "Italiana, serif", color: colors.white }}
         >
-          Get in Touch with{" "}
-          <span style={{ color: colors.leafGreen }}>
-            Gaurav Bamboo Chick Maker
-          </span>
+          Connect With
+          <span style={{ color: colors.greenSoft }}> Gaurav Bamboo Chick Maker</span>
         </h1>
 
+        {/* Description */}
         <p
-          className="text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8"
-          style={{ color: colors.whitePure, fontFamily: "Italiana" }}
+          className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-xl"
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
-          We’re here to help you with sustainable and aesthetic bamboo chick
-          solutions. Reach out for consultations, orders, or customized designs
-          for your home and farm.
+          Whether you need custom bamboo blinds, premium farm solutions,
+          or beautifully crafted home décor — we're here to guide you with
+          expert craftsmanship and eco-friendly excellence.
         </p>
 
-        {/* Contact Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="tel:+9198113 67632"
-            className="w-full sm:w-auto px-6 py-3 rounded-full font-semibold shadow-lg text-center transition-all"
+            href="tel:+917838788389"
+            className="px-6 py-2 rounded-full font-semibold shadow-lg text-center transition-all text-black hover:scale-105"
             style={{
-              backgroundColor: colors.leafGreen,
-              color: colors.whitePure,
+              backgroundColor: colors.greenSoft,
+              fontFamily: "Zen Dots, sans-serif",
             }}
           >
-            📞 Call Us
+            📞 Call Now
           </a>
+
           <a
-            href="mailto:Info@gauravbamboochikmaker.in"
-            className="w-full sm:w-auto px-6 py-3 rounded-full font-semibold shadow-lg text-center transition-all"
+            href="mailto:Gauravbamboochikmaker@gmail.com"
+            className="px-6 py-2 rounded-full font-semibold shadow-lg border text-center transition-all hover:bg-white hover:text-black hover:scale-105"
             style={{
-              backgroundColor: colors.deepBlue,
-              color: colors.whitePure,
+              borderColor: colors.white,
+              color: colors.white,
+              fontFamily: "Zen Dots, sans-serif",
             }}
           >
-            ✉️ Email Us
+            ✉️ Send Email
           </a>
         </div>
       </div>

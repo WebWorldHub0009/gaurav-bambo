@@ -1,9 +1,9 @@
 // src/components/ProductHero.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import heroBg from "../assets/home/bh1.jpg"; // 👉 replace with your bg
+import heroBg from "../assets/home/bh1.jpg";
 
-// 🎨 Brand Colors
+// Brand Colors
 const colors = {
   deepBlue: "#234A8A",
   brightRed: "#E8452D",
@@ -17,66 +17,69 @@ const colors = {
 export default function ProductHero() {
   return (
     <section
-      className="relative w-full h-[80vh] flex items-center justify-center text-center"
+      className="relative w-full h-[80vh] flex items-end"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* 🔥 Overlay */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* ✨ Content */}
-      <div className="relative z-10 max-w-4xl px-6">
-        {/* Title */}
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl px-6 pb-14 md:pb-20 lg:pl-20 text-left">
+        {/* Main Title */}
         <h1
-          className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-lg mb-6"
-          style={{ fontFamily: "Italiana, serif", color: colors.whitePure }}
+          className="text-3xl md:text-5xl font-bold leading-tight drop-shadow-lg mb-4"
+          style={{
+            fontFamily: "Italiana, serif",
+            color: colors.whitePure,
+          }}
         >
-          Discover the{" "}
-          <span style={{ color: colors.orangeGold }}>Elegance</span> of{" "}
-          <span style={{ color: colors.leafGreen }}>Bamboo Creations</span>
+          Handcrafted Bamboo  
+          <span style={{ color: colors.orangeGold }}> Blinds</span> &  
+          <span style={{ color: colors.leafGreen }}> Decor</span>
         </h1>
 
         {/* Subtitle */}
         <p
-          className="text-lg md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
-          style={{ fontFamily: "Orbitron, sans-serif", color: "#EDEDED" }}
+          className="text-base md:text-lg leading-relaxed max-w-lg mb-6"
+          style={{
+            fontFamily: "Inter, sans-serif",
+            color: "#E6E6E6",
+          }}
         >
-          Handcrafted bamboo chicks, blinds, and décor — blending{" "}
-          <span style={{ color: colors.orangeGold }}>tradition</span> with{" "}
-          <span style={{ color: colors.deepBlue }}>modern design</span> for a
-          sustainable lifestyle.
+          Sustainable, elegant and long-lasting bamboo creations —
+          crafted with precision to elevate your home and workspace
+          with natural texture and warmth.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
-          {/* Shop Now -> Contact */}
+        <div className="flex items-center gap-4 mt-2">
           <Link to="/contact">
             <button
-              className="cursor-pointer px-8 py-3 rounded-full text-lg font-semibold shadow-lg transition-all duration-300 transform hover:scale-110 hover:shadow-2xl"
+              className="cursor-pointer px-6 py-2 rounded-full text-sm md:text-base font-semibold shadow-md transition-all duration-300 transform hover:scale-105"
               style={{
                 backgroundColor: colors.orangeGold,
                 color: colors.whitePure,
                 fontFamily: "Zen Dots, sans-serif",
               }}
             >
-              🛒 Shop Now
+              Shop Now
             </button>
           </Link>
 
-          {/* View Gallery */}
           <Link to="/gallery">
             <button
-              className="cursor-pointer px-8 py-3 rounded-full text-lg font-semibold border shadow-lg transition-all duration-300 transform hover:bg-white hover:text-black hover:scale-110"
+              className="cursor-pointer px-6 py-2 rounded-full text-sm md:text-base font-semibold border transition-all duration-300 hover:bg-white hover:text-black"
               style={{
                 borderColor: colors.whitePure,
                 color: colors.whitePure,
                 fontFamily: "Zen Dots, sans-serif",
               }}
             >
-              ✨ View Our Gallery
+              View Gallery
             </button>
           </Link>
         </div>

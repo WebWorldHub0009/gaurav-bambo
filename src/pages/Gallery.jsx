@@ -37,6 +37,16 @@ import img27 from "../assets/product/pigeon.jpg";
 import img28 from "../assets/product/product.jpg";
 import img29 from "../assets/product/roller.jpg";
 
+import img30 from "../assets/home/n1.jpg"
+import img31 from "../assets/home/n2.jpg"
+import img32 from "../assets/home/n3.jpg"
+import img33 from "../assets/home/n4.jpg"
+// import img34 from "../assets/home/n5.jpg"
+import img35 from "../assets/home/na1.jpg"
+import img36 from "../assets/home/na2.jpg"
+import img37 from "../assets/home/na5.jpg"
+
+
 import GalleryHero from "../components/GalleryHero";
 
 // Colors
@@ -52,6 +62,14 @@ const colors = {
 
 // Media array (images only now)
 const media = [
+   { src: img30 },
+  { src: img31 },
+  { src: img32 },
+  { src: img33 },
+  // { src: img34 },
+  { src: img35},
+  { src: img36 },
+  { src: img37},
   { src: img1 },
   { src: img2 },
   { src: img3 },

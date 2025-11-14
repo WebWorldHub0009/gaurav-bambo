@@ -15,7 +15,7 @@ const colors = {
 };
 
 // Background image
-import bg from "../assets/home/bbh4.jpg"; // Replace with your image
+import bg from "../assets/home/na5.jpg"; // Replace with your image
 
 export default function AboutHero() {
   return (
